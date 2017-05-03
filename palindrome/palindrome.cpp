@@ -2,7 +2,7 @@
 #include <algorithm>
 #include <string>
 
-bool checkPalindrome(std::string inputString)
+bool isPalindrome(std::string inputString)
 {
     std::transform(inputString.begin(), inputString.end(), inputString.begin(), ::tolower);
     std::string s = inputString.substr();
@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
         str.append(argv[i]);
     }
 
-    if (checkPalindrome(str) != 0)
+    if (isPalindrome(str) != 0)
         std::cout << "Yes, '" << str << "' is a palindrome.\n";
     else
         std::cout << "No, '" << str << "' is NOT a palindrome.\n";
